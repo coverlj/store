@@ -25,7 +25,6 @@ s2=list(set(s))
 for l in s:
     if l not in t:
         t.append(l)
-print(t)
 print("1.3种类月销售量占比(百分比)：")
 for j in t:
     print(j,"月销售量占比为：")
