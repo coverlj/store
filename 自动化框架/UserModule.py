@@ -7,10 +7,10 @@ class Head_Sculpture_Operation:
     def __init__(self,driver):
         self.driver = driver
     def xgtx(self,username,pwd):
-        self.driver.find_element_by_xpath("//*[@id='loginname']").send_keys(username)
-        self.driver.find_element_by_xpath("//*[@id='password']").send_keys(pwd)
+        self.driver.find_element(By.XPATH,"//*[@id='loginname']").send_keys(username)
+        self.driver.find_element(By.XPATH,"//*[@id='password']").send_keys(pwd)
         time.sleep(1)
-        self.driver.find_element_by_xpath("//*[@id='submit']").click()
+        self.driver.find_element(By.XPATH,"//*[@id='submit']").click()
         time.sleep(2)
         a = self.driver.window_handles
         self.driver.switch_to.window(a[-1])
@@ -18,12 +18,12 @@ class Head_Sculpture_Operation:
         time.sleep(2)
         self.driver.find_element(By.XPATH, "/html/body/div[4]/div[2]/div[2]/div[2]/div/div[3]/ul/li[7]/img").click()
         time.sleep(3)
-        return self.driver.find_element_by_xpath('/html/body/div[3]/div[2]/div[1]/img').get_attribute("src")
+        return self.driver.find_element(By.XPATH,'/html/body/div[3]/div[2]/div[1]/img').get_attribute("src")
     def sctx(self,username,pwd):
-        self.driver.find_element_by_xpath("//*[@id='loginname']").send_keys(username)
-        self.driver.find_element_by_xpath("//*[@id='password']").send_keys(pwd)
+        self.driver.find_element(By.XPATH,"//*[@id='loginname']").send_keys(username)
+        self.driver.find_element(By.XPATH,"//*[@id='password']").send_keys(pwd)
         time.sleep(1)
-        self.driver.find_element_by_xpath("//*[@id='submit']").click()
+        self.driver.find_element(By.XPATH,"//*[@id='submit']").click()
         time.sleep(2)
         self.driver.find_element(By.XPATH,"/html/body/div[3]/div[2]/div[1]/img").click()
         time.sleep(2)
@@ -55,11 +55,11 @@ class Head_Sculpture_Operation:
         self.driver.quit()
         return message
     def outxt(self,username,pwd):
-        self.driver.find_element_by_xpath("//*[@id='loginname']").send_keys(username)
-        self.driver.find_element_by_xpath("//*[@id='password']").send_keys(pwd)
+        self.driver.find_element(By.XPATH,"//*[@id='loginname']").send_keys(username)
+        self.driver.find_element(By.XPATH,"//*[@id='password']").send_keys(pwd)
         time.sleep(1)
-        self.driver.find_element_by_xpath("//*[@id='submit']").click()
+        self.driver.find_element(By.XPATH,"//*[@id='submit']").click()
         time.sleep(2)
         self.driver.find_element(By.XPATH, "/html/body/div[2]/div/div/a[2]/img").click()
-# c=Head_Sculpture_Operation()
-# c.xgtx("cll","admin")
+    def getResult(self):
+        return self.driver.title

@@ -33,21 +33,6 @@ class dxwj():
                     ws.write(indexs+1,c,b)
                     new_excel.save(textdata)
             print(a,b,textdata)
-#
-# t = dxwj()
-# # b=t.xlrd_excel("d:/HKR.xls",4)
-# # print(b)
-# # for i in range(len(b)):
-# #     for y in range(len(b[i])):
-# #          if type(b[i][y])==float:
-# #              a=b[i][y]
-# #              b[i].remove(b[i][y])
-# #              b[i].insert(y,int(a))
-# #
-# # t.xlwt_excel("admin1","成功",3,"d:/HKR.xls")
-#
-#
-# print(t.xlrd_excel("d:/HKRsctx.xls",4))
 
 
 
